@@ -25,7 +25,7 @@ class Config(object):
         self.pad_size = 32                                              # 每句话处理成的长度(短填长切)
         self.learning_rate = 5e-5                                       # 学习率
         self.bert_path = './bert_pretrain'
-        self.tokenizer = BertTokenizer.from_pretrained(self.bert_path)
+        self.tokenizer = BertTokenizer.from_pretrained(self.bert_path + '/bert-base-chinese-vocab.txt')
         self.hidden_size = 768
 
 
