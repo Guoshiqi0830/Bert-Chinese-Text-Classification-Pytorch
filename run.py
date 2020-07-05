@@ -9,11 +9,12 @@ from utils import build_dataset, build_iterator, get_time_dif
 
 parser = argparse.ArgumentParser(description='Chinese Text Classification')
 parser.add_argument('--model', type=str, required=True, help='choose a model: Bert, ERNIE')
+parser.add_argument('--dataset', type=str, required=True, help = 'input dataset')
 args = parser.parse_args()
 
 
 if __name__ == '__main__':
-    dataset = 'THUCNews'  # 数据集
+    dataset = args.dataset  # 数据集
 
     model_name = args.model  # bert
     x = import_module('models.' + model_name)
